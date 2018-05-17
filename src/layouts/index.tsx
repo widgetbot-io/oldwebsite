@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 import Header from '../components/Header'
 import { Root, Stars } from './elements'
 
-const Layout = ({ children, data }) => (
+const Layout = ({ children, data, location }) => (
   <Root>
     <Stars params={require('./particles.json')} />
     <Helmet
