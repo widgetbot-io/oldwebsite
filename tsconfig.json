@@ -2,7 +2,7 @@
   "compilerOptions": {
     "outDir": "./dist/",
     "sourceMap": true,
-    "module": "commonjs",
+    "module": "es2015",
     "target": "esnext",
     "jsx": "react",
     "lib": ["dom", "es2015", "es2017"],
