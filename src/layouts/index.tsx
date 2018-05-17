@@ -3,29 +3,22 @@ import './index.css'
 import * as React from 'react'
 import Helmet from 'react-helmet'
 
-import Header from '../components/header'
+import Header from '../components/Header'
+import { Root, Stars } from './elements'
 
 const Layout = ({ children, data }) => (
-  <div>
+  <Root>
+    <Stars params={require('./particles.json')} />
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
         { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' },
+        { name: 'keywords', content: 'sample, something' }
       ]}
     />
-    <Header siteTitle={data.site.siteMetadata.title} />
-    <div
-      style={{
-        margin: '0 auto',
-        maxWidth: 960,
-        padding: '0px 1.0875rem 1.45rem',
-        paddingTop: 0,
-      }}
-    >
-      {children()}
-    </div>
-  </div>
+    <Header />
+    {children()}
+  </Root>
 )
 
 export default Layout

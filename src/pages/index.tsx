@@ -1,13 +1,20 @@
-import Link from 'gatsby-link'
 import * as React from 'react'
 
-const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
+import { Button, Content, Embed, Root, Title } from './elements'
+
+const Home = () => (
+  <Root>
+    <Content.Left>
+      <Title.Primary>WidgetBot</Title.Primary>
+      <Title.Secondary>Discord widgets for your website</Title.Secondary>
+      <Button.Primary to="/page-2/">Create</Button.Primary>
+    </Content.Left>
+    <Content.Right>
+      <Embed>
+        <iframe src="https://canary.widgetbot.io/channels/299881420891881473/355719584830980096/" />
+      </Embed>
+    </Content.Right>
+  </Root>
 )
 
-export default IndexPage
+export default Home
