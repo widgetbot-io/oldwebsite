@@ -16,7 +16,7 @@ const Layout = ({ children, data }) => (
         { name: 'keywords', content: 'sample, something' }
       ]}
     />
-    <Header />
+    <Header withText={location.pathname !== '/'} />
     {children()}
   </Root>
 )

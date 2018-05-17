@@ -9,6 +9,30 @@ export const Root = styled('header')`
   flex-shrink: 0;
 `
 
+export namespace Logo {
+  export const Root = styled(Link)`
+    display: flex;
+    height: 50px;
+    text-decoration: none;
+    user-select: none;
+    cursor: pointer;
+  `
+
+  export const Title = styled('h1')`
+    margin: 0;
+    line-height: 50px;
+    font-weight: 400;
+    font-size: 1.4rem;
+    margin-left: 15px;
+    margin-bottom: 9px;
+  `
+
+  export const Image = styled('img')`
+    height: 100%;
+    width: 50px;
+  `
+}
+
 export namespace Nav {
   export const Left = styled('div')`
     display: flex;
@@ -32,12 +56,7 @@ export namespace Nav {
     margin: 0px 1rem;
 
     &:hover {
-      color: #6E84D2;
+      color: #6e84d2;
     }
   `
 }
-
-export const Logo = styled('img')`
-  height: 50px;
-  width: 50px;
-`

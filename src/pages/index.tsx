@@ -1,13 +1,13 @@
 import * as React from 'react'
 
-import { Button, Content, Embed, Root, Title } from './elements'
+import { Button, Content, Embed, Root, Title } from '../styles'
 
 const Home = () => (
   <Root>
     <Content.Left>
       <Title.Primary>WidgetBot</Title.Primary>
       <Title.Secondary>Discord widgets for your website</Title.Secondary>
-      <Button.Primary to="/page-2/">Create</Button.Primary>
+      <Button.Primary to="/configurator/">Create</Button.Primary>
     </Content.Left>
     <Content.Right>
       <Embed>

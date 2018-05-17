@@ -1,18 +1,19 @@
-import Link from 'gatsby-link'
 import * as React from 'react'
-import { Nav, Logo, Root } from './elements'
 
-const Header = () => (
+import { Logo, Nav, Root } from './elements'
+
+const Header = ({ withText }) => (
   <Root>
     <Nav.Left>
-      <Link to="/">
-        <Logo src={require('./logo.svg')} />
-      </Link>
+      <Logo.Root to="/">
+        <Logo.Image src={require('./logo.svg')} />
+        {withText && <Logo.Title>WidgetBot</Logo.Title>}
+      </Logo.Root>
     </Nav.Left>
     <Nav.Right>
-      <Nav.Action to="/">API</Nav.Action>
-      <Nav.Action to="/">Crate</Nav.Action>
-      <Nav.Action to="/">GitHub</Nav.Action>
+      <Nav.Action to="/api/">API</Nav.Action>
+      <Nav.Action to="/crate/">Crate</Nav.Action>
+      <Nav.Action to="/github/">GitHub</Nav.Action>
     </Nav.Right>
   </Root>
 )
