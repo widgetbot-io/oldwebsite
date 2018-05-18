@@ -2,6 +2,7 @@ import styled from 'react-emotion'
 
 interface Props {
   position: number
+  highlight: boolean
 }
 
 export const Root = styled<Props, 'div'>('div')`
@@ -22,7 +23,8 @@ export const Root = styled<Props, 'div'>('div')`
     ${({ position }) => 0.5 + position * 0.07}
   );
   box-shadow: rgba(114, 137, 218, ${({ position }) => 0.2 + position * 0.1}) 0px
-    0px 100px;
+    0px 70px
+    ${({ highlight }) => (highlight ? ', #687DC5 0px 0px 0px 4px' : '')};
 `
 
 export const Title = styled('h1')`
@@ -55,6 +57,8 @@ export const Details = styled('ul')`
   flex-grow: 1;
   padding: 20px;
   list-style: none;
+  overflow: auto;
+
   & > li:last-child {
     border-bottom: none;
   }
@@ -79,4 +83,17 @@ export const Tip = styled('span')`
   text-transform: uppercase;
   margin-bottom: 7px;
   display: inline-block;
+`
+
+export const Button = styled('button')`
+  cursor: pointer;
+  margin: 19px 25px;
+  height: 45px;
+  display: block;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  background: none;
+  flex-shrink: 0;
+  font-size: 1.07rem;
+  outline: none;
 `

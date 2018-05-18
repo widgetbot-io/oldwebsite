@@ -5,7 +5,13 @@ import { Root } from '../styles'
 
 const Pricing = () => (
   <Root>
-    <Product name="Free" price={0} zIndex={1}>
+    <Product
+      name="Free"
+      button="Get started"
+      onClick={console.log}
+      price={0}
+      zIndex={1}
+    >
       <Tip>Fully usable, feature-rich</Tip>
       <Item>Guest chat</Item>
       <Item>Channel switching</Item>
@@ -14,7 +20,8 @@ const Pricing = () => (
         100 concurrent connections, with realtime updates for all users
       </Item>
     </Product>
-    <Product name="Supporter" price={2} zIndex={3}>
+
+    <Product name="Supporter" onClick={console.log} price={2} zIndex={3}>
       <Tip>All that plus</Tip>
       <Item>15,000 requests a day</Item>
       <Item>
@@ -23,7 +30,14 @@ const Pricing = () => (
       <Item>Custom embed colors</Item>
       <Item>Embed analytics</Item>
     </Product>
-    <Product name="Pro" price={5} zIndex={4}>
+
+    <Product
+      name="Pro"
+      onClick={console.log}
+      price={5}
+      zIndex={4}
+      highlight={true}
+    >
       <Tip>All that plus</Tip>
       <Item>45,000 requests a day</Item>
       <Item>
@@ -33,7 +47,8 @@ const Pricing = () => (
       <Item>Instantly display an alert to all of your visitors</Item>
       <Item>Option to remove branding</Item>
     </Product>
-    <Product name="Self-hosted" price={40} zIndex={2}>
+
+    <Product name="Self-hosted" onClick={console.log} price={40} zIndex={2}>
       <Tip>Fast, packaged Node server</Tip>
       <Item>Unlimited requests</Item>
       <Item>Unlimited concurrent users</Item>
