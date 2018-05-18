@@ -11,13 +11,9 @@ const Header = ({ withText }) => (
       </Logo.Root>
     </Nav.Left>
     <Nav.Right>
-      <Nav.Href href="https://patreon.com/widgetbot" target="_blank">
-        Patreon
-      </Nav.Href>
+      <Nav.Action to="/pricing/">Pricing</Nav.Action>
       {/* <Nav.Action to="/api/">API</Nav.Action> */}
-      <Nav.Href href="https://docs.widgetbot.io/" target="_blank">
-        Crate
-      </Nav.Href>
+      <Nav.Action to="/crate/">Crate</Nav.Action>
       <Nav.Href href="https://github.com/widgetbot-io/" target="_blank">
         GitHub
       </Nav.Href>

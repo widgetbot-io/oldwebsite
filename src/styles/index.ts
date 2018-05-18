@@ -47,9 +47,7 @@ export namespace Button {
     font-size: 1.25rem;
     color: white;
     text-align: center;
-    box-shadow: rgba(114, 137, 218, 0.7) 0px 0px 100px;
     text-transform: uppercase;
-    background: linear-gradient(45deg, rgb(114, 137, 218), rgb(102, 123, 193));
     border: none;
     outline: none;
     padding: 0.75em 1.5em;
@@ -61,12 +59,18 @@ export namespace Button {
     cursor: pointer;
   `
 
-  export const Primary = styled('a')`
+  export const Primary = styled(Link)`
     ${Base};
+
+    background: linear-gradient(45deg, rgb(114, 137, 218), rgb(102, 123, 193));
+    box-shadow: rgba(114, 137, 218, 0.7) 0px 0px 100px;
   `
 
   export const Secondary = styled(Link)`
     ${Base};
+
+    color: rgb(114, 137, 218);
+    text-shadow: rgba(114, 137, 218, 0.7) 0px 0px 50px;
   `
 }
 

@@ -1,10 +1,14 @@
 module.exports = {
   siteMetadata: {
-    title: 'Gatsby Default Starter'
+    title: 'WidgetBot'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
     'gatsby-plugin-emotion'
-  ]
+  ],
+  proxy: {
+    prefix: '/api',
+    url: 'http://localhost:3000'
+  }
 }

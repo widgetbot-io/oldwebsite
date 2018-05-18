@@ -12,8 +12,12 @@ const Layout = ({ children, data, location }) => (
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
-        { name: 'description', content: 'Sample' },
-        { name: 'keywords', content: 'sample, something' }
+        { name: 'description', content: 'Discord widgets for your website' },
+        {
+          name: 'keywords',
+          content:
+            'discord, widgets, widgetbot, titanembeds, titanembeds alternatives, samdd, voakie, embed discord on website'
+        }
       ]}
     />
     <Header withText={location.pathname !== '/'} />

@@ -25,6 +25,7 @@ export namespace Logo {
     font-size: 1.4rem;
     margin-left: 15px;
     margin-bottom: 9px;
+    text-shadow: rgba(0, 0, 0, 0.7) 0px 0px 50px;
   `
 
   export const Image = styled('img')`
