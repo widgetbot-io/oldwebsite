@@ -59,4 +59,7 @@ export namespace Nav {
       color: #6e84d2;
     }
   `
+
+  const href = Action.withComponent('a')
+  export const Href = styled<any, 'a'>(href)``
 }

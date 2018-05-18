@@ -61,9 +61,10 @@ export namespace Button {
     cursor: pointer;
   `
 
-  export const Primary = styled(Link)`
+  export const Primary = styled('a')`
     ${Base};
   `
+
   export const Secondary = styled(Link)`
     ${Base};
   `
