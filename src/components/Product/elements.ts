@@ -62,6 +62,11 @@ export const Details = styled('ul')`
   & > li:last-child {
     border-bottom: none;
   }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: 4px solid #8793bf;
+  }
 `
 
 export const Item = styled('li')`
