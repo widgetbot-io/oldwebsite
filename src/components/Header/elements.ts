@@ -1,5 +1,6 @@
 import Link from 'gatsby-link'
-import styled from 'react-emotion'
+
+import styled from '../../modules/emotion'
 
 export const Root = styled('header')`
   display: flex;
@@ -7,6 +8,8 @@ export const Root = styled('header')`
   padding: 1rem 0;
   width: 100%;
   flex-shrink: 0;
+  z-index: 1;
+  transition: transform 0.5s ease;
 `
 
 export namespace Logo {

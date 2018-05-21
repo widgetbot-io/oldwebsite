@@ -1,7 +1,8 @@
 import * as React from 'react'
 
 import Crater from '../components/Crater'
-import { Content, Root } from '../styles'
+import { Content, Root, Title } from '../styles'
+import { Feature, Paragraph } from '../styles/crate'
 
 class Crate extends React.Component {
   render() {
@@ -11,13 +12,24 @@ class Crate extends React.Component {
           <Crater />
         </Content.Left>
         <Content.Right>
-          <h1>Crate</h1>
-          <p>
-            Crate is a lightweight JS library that embeds WidgetBot on your
-            website. Message notifications - displayed in the corner of your
-            website. Intuitive API - programmatically add messages, toggle the
-            widget or dynamically update the colors.
-          </p>
+          <Title.Primary>Crate</Title.Primary>
+
+          <Paragraph>
+            Crate is a JS library that transforms WidgetBot into a <i>sexy </i>
+            button, available in the bottom right of your site.
+          </Paragraph>
+
+          <Feature.List>
+            <Feature.Item description="small interactive chat bubbles, displayed in the corner of your site.">
+              Message notifications
+            </Feature.Item>
+            <Feature.Item description="users will be more inclined to send messages, or join your server.">
+              Higher conversion rate
+            </Feature.Item>
+            <Feature.Item description="add messages, toggle the widget or update the colors.">
+              Intuitive API
+            </Feature.Item>
+          </Feature.List>
         </Content.Right>
       </Root>
     )

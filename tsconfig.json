@@ -8,7 +8,11 @@
     "lib": ["dom", "es2015", "es2017"],
     "allowJs": true,
     "moduleResolution": "node",
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "typed-emotion": ["src/modules/emotion.ts"]
+    }
   },
   "include": ["./src/**/*"]
 }

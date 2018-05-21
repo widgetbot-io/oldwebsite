@@ -14,9 +14,12 @@ const Header = ({ withText }) => (
       <Nav.Action to="/pricing/">Pricing</Nav.Action>
       {/* <Nav.Action to="/api/">API</Nav.Action> */}
       <Nav.Action to="/crate/">Crate</Nav.Action>
-      <Nav.Href href="https://github.com/widgetbot-io/" target="_blank">
-        GitHub
+      <Nav.Href href="https://discord.gg/zyqZWr2" target="_blank">
+        Discord
       </Nav.Href>
+      {/* <Nav.Href href="https://github.com/widgetbot-io/" target="_blank">
+        GitHub
+      </Nav.Href> */}
     </Nav.Right>
   </Root>
 )
