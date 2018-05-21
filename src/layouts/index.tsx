@@ -74,7 +74,7 @@ class App extends React.Component<any> {
   scrolling = false
 
   onScroll(event) {
-    const threshold = 60
+    const threshold = 80
     const element = document.documentElement // event.target
 
     if (

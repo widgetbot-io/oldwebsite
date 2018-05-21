@@ -40,8 +40,14 @@ const Footer = () => (
       <Copyright
       >{`© ${new Date().getFullYear()} WidgetBot. Not affiliated with Discord`}</Copyright>
       <Credits>
-        By <a href="https://samdd.me">Sam Denty</a> and{' '}
-        <a href="https://voakie.com">Voakie</a>
+        {`By `}
+        <a href="https://samdd.me" target="_blank">
+          Sam Denty
+        </a>
+        {` and `}
+        <a href="https://voakie.com" target="_blank">
+          Voakie
+        </a>
       </Credits>
     </Chin>
   </Root>
