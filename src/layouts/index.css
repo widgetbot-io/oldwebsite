@@ -20,6 +20,7 @@ div[data-reactroot] {
   font-family: Whitney, 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande',
     sans-serif;
   box-sizing: inherit;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @font-face {
