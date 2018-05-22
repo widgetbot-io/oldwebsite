@@ -59,7 +59,7 @@ export namespace Button {
     cursor: pointer;
   `
 
-  export const Primary = styled(Link)`
+  export const Primary = styled('a')`
     ${Base};
 
     background: linear-gradient(45deg, rgb(114, 137, 218), rgb(102, 123, 193));
