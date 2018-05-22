@@ -21,7 +21,12 @@ const Pricing = () => (
       </Item>
     </Product>
 
-    <Product name="Supporter" onClick={console.log} price={2} zIndex={3}>
+    <Product
+      name="Supporter"
+      onClick={() => window.open('https://www.patreon.com/bePatron?u=5594164')}
+      price={2}
+      zIndex={3}
+    >
       <Tip>All that plus</Tip>
       <Item>15,000 requests a day</Item>
       <Item>
@@ -33,7 +38,7 @@ const Pricing = () => (
 
     <Product
       name="Pro"
-      onClick={console.log}
+      onClick={() => window.open('https://www.patreon.com/bePatron?u=5594164')}
       price={5}
       zIndex={4}
       highlight={true}
@@ -48,7 +53,12 @@ const Pricing = () => (
       <Item>Option to remove branding</Item>
     </Product>
 
-    <Product name="Self-hosted" onClick={console.log} price={40} zIndex={2}>
+    <Product
+      name="Self-hosted"
+      onClick={() => window.open('https://www.patreon.com/bePatron?u=5594164')}
+      price={40}
+      zIndex={2}
+    >
       <Tip>Fast, packaged Node server</Tip>
       <Item>Unlimited requests</Item>
       <Item>Unlimited concurrent users</Item>
