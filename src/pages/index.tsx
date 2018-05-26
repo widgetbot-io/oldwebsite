@@ -9,7 +9,7 @@ const Home = () => (
       <div style={{ opacity: 0.3 }}>
         This website is currently under construction!<br />
         Once you've clicked "Invite", head to
-        https://canary.widgetbot.io/channels/YOUR_SERVER_ID
+        https://widgetbot.io/channels/YOUR_SERVER_ID
       </div>
       <Title.Primary>WidgetBot</Title.Primary>
       <Title.Secondary>Discord widgets for your website</Title.Secondary>
