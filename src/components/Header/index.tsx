@@ -11,7 +11,7 @@ const Header = ({ withText }) => (
       </Logo.Root>
     </Nav.Left>
     <Nav.Right>
-      <Nav.Action to="/pricing/">Pricing</Nav.Action>
+      <Nav.Action to="/patron/">Patron</Nav.Action>
       {/* <Nav.Action to="/api/">API</Nav.Action> */}
       <Nav.Action to="/crate/">Crate</Nav.Action>
       <Nav.Href href="https://discord.gg/zyqZWr2" target="_blank">

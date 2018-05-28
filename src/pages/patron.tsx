@@ -3,7 +3,7 @@ import * as React from 'react'
 import Product, { Item, Tip } from '../components/Product'
 import { Root } from '../styles'
 
-const Pricing = () => (
+const Patron = () => (
   <Root>
     <Product
       name="Free"
@@ -69,4 +69,4 @@ const Pricing = () => (
   </Root>
 )
 
-export default Pricing
+export default Patron

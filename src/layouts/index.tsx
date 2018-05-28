@@ -10,6 +10,11 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { Content, Root, Stars } from './elements'
 
+export const client =
+  typeof window !== 'undefined'
+    ? new ApolloClient({ uri: '/api/graphql', connectToDevTools: true } as any)
+    : null
+
 class App extends React.Component<any> {
   render() {
     const { children, data, location } = this.props
@@ -45,12 +50,9 @@ class App extends React.Component<any> {
   state = {
     footer: false
   }
-  client: ApolloClient<any>
 
   componentDidMount() {
-    this.client = new ApolloClient({ uri: '/api/graphql' })
-
-    this.client
+    client
       .query({
         query: gql`
           {
