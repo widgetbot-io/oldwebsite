@@ -116,7 +116,7 @@
     "@types/history" "*"
     "@types/react" "*"
 
-"@types/react@*", "@types/react@^16.3.14":
+"@types/react@*":
   version "16.3.14"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.3.14.tgz#f90ac6834de172e13ecca430dcb6814744225d36"
   dependencies:
@@ -134,13 +134,11 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@widgetbot/embed-api/-/embed-api-1.1.0.tgz#d869db4245efb1d70dde9fdb78c2de0800574a46"
 
-"@widgetbot/react-embed@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@widgetbot/react-embed/-/react-embed-1.0.0.tgz#76c26b9d641323a90157948898515de972c88ac7"
+"@widgetbot/react-embed@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@widgetbot/react-embed/-/react-embed-1.0.4.tgz#15d2ead95f67dc06521ea7c79a351c12f4a64e78"
   dependencies:
-    "@types/react" "^16.3.14"
     "@widgetbot/embed-api" "^1.1.0"
-    react "^16.4.0"
 
 abbrev@1:
   version "1.1.1"
@@ -6694,15 +6692,6 @@ react@^15.6.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.0"
     prop-types "^15.5.10"
-
-react@^16.4.0:
-  version "16.4.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.4.0.tgz#402c2db83335336fba1962c08b98c6272617d585"
-  dependencies:
-    fbjs "^0.8.16"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.0"
 
 read-cache@^1.0.0:
   version "1.0.0"

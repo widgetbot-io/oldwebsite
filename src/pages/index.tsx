@@ -1,4 +1,4 @@
-import WidgetBot, { API } from '@widgetbot/react-embed'
+import { API } from '@widgetbot/react-embed'
 import gql from 'graphql-tag'
 import * as React from 'react'
 
@@ -42,9 +42,7 @@ class Home extends React.Component {
           {/* <Button.Secondary to="/configurator/">Configurator</Button.Secondary> */}
         </Content.Left>
         <Content.Right>
-          <Embed>
-            <WidgetBot onAPI={this.onAPI.bind(this)} {...demo} />
-          </Embed>
+          <Embed onAPI={this.onAPI.bind(this)} {...demo} />
         </Content.Right>
       </Root>
     )

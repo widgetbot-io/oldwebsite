@@ -1,3 +1,4 @@
+import WidgetBot from '@widgetbot/react-embed'
 import Link from 'gatsby-link'
 import styled, { css } from 'react-emotion'
 
@@ -74,7 +75,7 @@ export namespace Button {
   `
 }
 
-export const Embed = styled('div')`
+export const Embed = styled(WidgetBot)`
   height: 70vh;
   width: 100%;
   max-height: 400px;
@@ -83,10 +84,4 @@ export const Embed = styled('div')`
 
   border-radius: 8px;
   overflow: hidden;
-
-  & > iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-  }
 `

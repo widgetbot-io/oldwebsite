@@ -5,7 +5,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@types/react-helmet": "^5.0.6",
-    "@widgetbot/react-embed": "^1.0.0",
+    "@widgetbot/react-embed": "^1.0.4",
     "apollo-boost": "^0.1.6",
     "babel-plugin-transform-regenerator": "^6.26.0",
     "emotion": "^9.1.3",
