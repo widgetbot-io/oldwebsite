@@ -1,4 +1,5 @@
 import './index.css'
+import 'regenerator-runtime/runtime'
 
 import ApolloClient from 'apollo-boost'
 import { ThemeProvider } from 'emotion-theming'
@@ -10,10 +11,14 @@ import Footer from '../components/Footer'
 import Header from '../components/Header'
 import { Content, Root, Stars } from './elements'
 
-export const client =
-  typeof window !== 'undefined'
-    ? new ApolloClient({ uri: '/api/graphql', connectToDevTools: true } as any)
-    : null
+export let client: ApolloClient<any>
+
+if (typeof window !== 'undefined') {
+  client = new ApolloClient({
+    uri: '/api/graphql',
+    connectToDevTools: true
+  } as any)
+}
 
 class App extends React.Component<any> {
   render() {

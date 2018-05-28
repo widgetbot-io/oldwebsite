@@ -1,3 +1,4 @@
+import WidgetBot, { API } from '@widgetbot/react-embed'
 import gql from 'graphql-tag'
 import * as React from 'react'
 
@@ -15,6 +16,12 @@ class Home extends React.Component {
   state = {
     invite: `https://discordapp.com/oauth2/authorize?client_id=293731150239891456&scope=bot&permissions=537218112`,
     stats: null as Stats
+  }
+
+  onAPI(api: API) {
+    api.on('signIn', user => {
+      console.warn(`Signed in as "${user.name}"`)
+    })
   }
 
   render() {
@@ -36,7 +43,7 @@ class Home extends React.Component {
         </Content.Left>
         <Content.Right>
           <Embed>
-            <iframe src={demo} />
+            <WidgetBot onAPI={this.onAPI.bind(this)} {...demo} />
           </Embed>
         </Content.Right>
       </Root>
