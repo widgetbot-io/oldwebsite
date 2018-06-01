@@ -25,7 +25,7 @@ const Footer = () => (
         <Place.Href href="https://discord.gg/zyqZWr2" target="_blank">
           Discord server
         </Place.Href>
-        <Place.Href href="mailto:hello-widgetbot@samdd.me" target="_blank">
+        <Place.Href href="mailto:contact@widgetbot.io" target="_blank">
           Contact us
         </Place.Href>
       </Section>
