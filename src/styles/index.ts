@@ -38,6 +38,15 @@ export namespace Title {
     padding-bottom: 2rem;
     color: rgba(255, 255, 255, 0.9);
   `
+
+  export const Tertiary = styled('h3')`
+    margin: 0 0 1.0875rem;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    padding-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+  `
 }
 
 export namespace Button {
@@ -85,3 +94,20 @@ export const Embed = styled(WidgetBot)`
   border-radius: 8px;
   overflow: hidden;
 `
+export namespace List {
+  export const Unordered = styled('ul')`
+    margin: 0;
+  `
+}
+
+export namespace Text {
+  export const Block = styled('div')`
+    margin-bottom: 10px;
+    color: rgba(255, 255, 255, 0.9);
+  `
+
+  export const Heading = styled(Title.Tertiary)`
+    padding: 0.3rem;
+    margin: 0;
+  `
+}
