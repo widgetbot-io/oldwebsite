@@ -1,7 +1,7 @@
 import * as React from 'react'
 
-import Product, { Item, Tip } from '../components/Product'
-import { Root } from '../styles'
+import Product, { Item, Tip } from '../../components/Product'
+import { Root } from '../../styles'
 
 const Patron = () => (
   <Root>
