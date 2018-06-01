@@ -3,9 +3,9 @@ import 'regenerator-runtime/runtime'
 
 import ApolloClient from 'apollo-boost'
 import { ThemeProvider } from 'emotion-theming'
-import gql from 'graphql-tag'
 import * as React from 'react'
 import Helmet from 'react-helmet'
+import { StripeProvider } from 'react-stripe-elements'
 
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -21,6 +21,11 @@ if (typeof window !== 'undefined') {
 }
 
 class App extends React.Component<any> {
+  state = {
+    footer: false,
+    stripe: null
+  }
+
   render() {
     const { children, data, location } = this.props
 
@@ -43,34 +48,28 @@ class App extends React.Component<any> {
             ]}
           />
           <Header withText={location.pathname !== '/'} />
-          <Content onClick={this.hideFooter.bind(this)}>
-            {(children as any)()}
-          </Content>
+          <StripeProvider stripe={this.state.stripe}>
+            <Content onClick={() => this.footer(false)}>
+              {(children as any)()}
+            </Content>
+          </StripeProvider>
           <Footer />
         </Root>
       </ThemeProvider>
     )
   }
 
-  state = {
-    footer: false
-  }
-
   componentDidMount() {
-    client
-      .query({
-        query: gql`
-          {
-            stats {
-              onlineGuests
-            }
-          }
-        `
-      })
-      .then(result => console.log(result))
-
     this.scrollListener = this.onScroll.bind(this)
     window.addEventListener('scroll', this.scrollListener)
+
+    this.registerStripe()
+  }
+
+  registerStripe() {
+    this.setState({
+      stripe: (window as any).Stripe('pk_test_Z6B3rO296TZmtf87UQFfiDiw')
+    })
   }
 
   componentWillUnmount() {
@@ -84,37 +83,29 @@ class App extends React.Component<any> {
     const threshold = 80
     const element = document.documentElement // event.target
 
-    if (
+    const atBottom =
       element.scrollHeight - element.scrollTop <=
       element.clientHeight + threshold
-    ) {
-      if (!this.scrolling) this.showFooter()
-    } else {
-      this.hideFooter()
-    }
+
+    this.footer(atBottom && !this.scrolling)
   }
 
-  hideFooter() {
-    if (!this.state.footer) return
+  footer(visible: boolean) {
+    if (this.state.footer === visible) return
 
-    this.scrolling = true
-    this.setState({ footer: false })
-
-    window.scroll({ top: 0, left: 0, behavior: 'smooth' })
-
-    setTimeout(() => (this.scrolling = false), 200)
-  }
-
-  showFooter() {
-    if (this.state.footer) return
-
-    this.setState({ footer: true })
+    this.setState({ footer: visible })
 
     window.scroll({
-      top: document.body.clientHeight,
-      left: 0,
-      behavior: 'smooth'
+      behavior: 'smooth',
+      top: visible ? document.body.clientHeight : 0,
+      left: 0
     })
+
+    if (!visible) {
+      this.scrolling = true
+      window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+      setTimeout(() => (this.scrolling = false), 200)
+    }
   }
 }
 
