@@ -37,9 +37,9 @@ const Terms = () => (
 
       <Text.Block>
         <Text.Heading>Copyright</Text.Heading>
-        WidgetBot.io protected by copyright policies of the European Union. Any
-        material (code, images, etc.) produced by WidgetBot may strictly be used
-        under the principles of fair use
+        WidgetBot.io is protected by copyright policies of the European Union.
+        Any material (code, images, etc.) produced by WidgetBot may strictly be
+        used under the principles of fair use.
       </Text.Block>
     </Content.Right>
   </Root>
