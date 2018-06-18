@@ -41,22 +41,14 @@ class Crate extends React.Component {
   crate
 
   componentDidMount() {
-    setTimeout(() => {
-      // Load the crate library
-      if (!(window as any).Crate) {
-        // From network
-        const script = document.createElement('script')
-        script.src = 'https://crate.widgetbot.io/v2'
-        document.body.appendChild(script)
+    if ((window as any).Crate) return this.mounted()
 
-        window.addEventListener('crate', ({ Crate }: any) =>
-          this.mounted(Crate)
-        )
-      } else {
-        // From cache
-        this.mounted((window as any).Crate)
-      }
-    }, 3000)
+    // From network
+    const script = document.createElement('script')
+    script.src = 'https://cdn.jsdelivr.net/npm/@widgetbot/crate@3'
+    document.body.appendChild(script)
+
+    script.onload = () => this.mounted()
   }
 
   componentWillUnmount() {
@@ -65,18 +57,20 @@ class Crate extends React.Component {
     }
   }
 
-  mounted(Crate) {
-    this.crate = new Crate({
+  mounted() {
+    const { Crate } = window as any
+
+    const crate = new Crate({
       server: '299881420891881473',
       channel: '355719584830980096'
     })
 
-    setTimeout(() => {
-      this.crate.pulse()
-      setTimeout(() => {
-        this.crate.message(`Try it out!`, false)
-      }, 1000)
-    }, 2000)
+    crate.hide()
+
+    setTimeout(() => crate.show(), 3000)
+    setTimeout(() => crate.notify(`Try it out!`, false), 4000)
+
+    this.crate = crate
   }
 }
 
