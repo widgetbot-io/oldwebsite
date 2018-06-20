@@ -1,11 +1,19 @@
 import * as React from 'react'
 import { CardElement, Elements, injectStripe } from 'react-stripe-elements'
 
-import { Root, Title, Content } from '../../styles'
-import { Form, Card, Purchase, Seperator } from '../../styles/patron'
-import { navigateTo } from '../../../node_modules/gatsby-link'
+import { Root } from '../../styles'
+import {
+  Form,
+  Card,
+  Purchase,
+  Seperator,
+  Paragraph,
+  Title
+} from '../../styles/patron'
+import { navigateTo } from 'gatsby-link'
 import { products } from '.'
 import Product from '../../components/Product'
+import {} from '../../styles/crate'
 
 class _CardForm extends React.Component<any> {
   handleSubmit = ev => {
@@ -16,7 +24,10 @@ class _CardForm extends React.Component<any> {
   render() {
     return (
       <Form onSubmit={this.handleSubmit}>
-        <Title.Secondary>Card details</Title.Secondary>
+        <Title>Card details</Title>
+        <Paragraph>
+          Your payment will be securely processed with Stripe
+        </Paragraph>
         <Card>
           <CardElement
             style={{

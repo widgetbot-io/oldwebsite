@@ -1,5 +1,5 @@
 import styled, { css } from 'react-emotion'
-import { Button, Content } from '.'
+import { Button, Content, Title as $Title } from '.'
 
 export namespace Seperator {
   export const Left = styled(Content.Left)`
@@ -13,6 +13,15 @@ export namespace Seperator {
 
 export const Form = styled('form')`
   width: 100%;
+`
+
+export const Title = styled($Title.Secondary)`
+  padding-bottom: 1rem;
+`
+
+export const Paragraph = styled('p')`
+  margin-bottom: 2rem;
+  opacity: 0.4;
 `
 
 export const Card = styled('div')`
