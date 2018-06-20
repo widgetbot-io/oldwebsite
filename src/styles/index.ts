@@ -76,7 +76,7 @@ export namespace Button {
     box-shadow: rgba(114, 137, 218, 0.7) 0px 0px 100px;
   `
 
-  export const Secondary = styled(Link)`
+  export const Secondary = styled('a')`
     ${Base};
 
     color: rgb(114, 137, 218);

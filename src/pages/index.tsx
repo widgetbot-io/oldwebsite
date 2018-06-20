@@ -35,11 +35,12 @@ class Home extends React.Component {
           </div>
           <Title.Primary>WidgetBot</Title.Primary>
           <Title.Secondary>Discord widgets for your website</Title.Secondary>
-          {/* <Button.Primary to="/configurator/">Create</Button.Primary> */}
           <Button.Primary href={this.state.invite} target="_blank">
             Invite
           </Button.Primary>
-          {/* <Button.Secondary to="/configurator/">Configurator</Button.Secondary> */}
+          <Button.Secondary href="https://docs.widgetbot.io/embed/">
+            Documentation
+          </Button.Secondary>
         </Content.Left>
         <Content.Right>
           <Embed onAPI={this.onAPI.bind(this)} {...demo} />
