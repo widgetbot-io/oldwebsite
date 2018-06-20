@@ -12,7 +12,7 @@ export const Root = styled<Props, 'div'>('div')`
   max-height: 100%;
   width: 250px;
   background: white;
-  margin: 0 15px;
+  margin: 0 auto;
   border-radius: 4px;
   z-index: ${({ position }) => position};
 

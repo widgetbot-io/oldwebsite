@@ -64,7 +64,6 @@ class Crate extends React.Component {
       server: '299881420891881473',
       channel: '355719584830980096'
     })
-
     crate.hide()
 
     setTimeout(() => crate.show(), 3000)
