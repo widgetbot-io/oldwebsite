@@ -23,6 +23,7 @@ if (typeof window !== 'undefined') {
 
   // Crate
   {
+    const css = String.raw
     const script = document.createElement('script')
     script.src = 'https://cdn.jsdelivr.net/npm/@widgetbot/crate@3'
     document.body.appendChild(script)
@@ -31,7 +32,13 @@ if (typeof window !== 'undefined') {
       if (!crate) {
         crate = new (window as any).Crate({
           server: '299881420891881473',
-          channel: '355719584830980096'
+          channel: '355719584830980096',
+          css: css`
+            * {
+              font-family: Whitney, 'Helvetica Neue', Helvetica, Arial,
+                'Lucida Grande', sans-serif;
+            }
+          `
         })
 
         crate.notify({
