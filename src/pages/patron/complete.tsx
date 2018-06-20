@@ -1,4 +1,3 @@
-import * as URLSearchParams from 'url-search-params'
 import * as React from 'react'
 import { CardElement, Elements, injectStripe } from 'react-stripe-elements'
 
@@ -54,27 +53,34 @@ class _CardForm extends React.Component<any> {
 
 const CardForm = injectStripe(_CardForm)
 
-const Patron = ({ location }) => {
-  const params = new URLSearchParams(location.search.slice(1))
-  const product = products.find(product => product.id === params.get('product'))
-
-  if (!product) {
-    navigateTo('..')
-    return null
+class Patron extends React.Component {
+  state = {
+    product: null as typeof products[number]
   }
 
-  return (
-    <Elements>
-      <Root>
-        <Seperator.Left>
-          <Product {...product} />
-        </Seperator.Left>
-        <Seperator.Right>
-          <CardForm product={product} />
-        </Seperator.Right>
-      </Root>
-    </Elements>
-  )
+  componentDidMount() {
+    const params = new URLSearchParams(location.search.slice(1))
+    const product = products.find(
+      product => product.id === params.get('product')
+    )
+
+    product ? this.setState({ product }) : navigateTo('..')
+  }
+
+  render() {
+    const { product } = this.state
+
+    return (
+      <Elements>
+        <Root>
+          <Seperator.Left>{product && <Product {...product} />}</Seperator.Left>
+          <Seperator.Right>
+            <CardForm product={product} />
+          </Seperator.Right>
+        </Root>
+      </Elements>
+    )
+  }
 }
 
 export default Patron
