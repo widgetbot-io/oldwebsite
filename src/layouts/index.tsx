@@ -13,11 +13,27 @@ import { Content, Root, Stars } from './elements'
 
 export let client: ApolloClient<any>
 
+export let crate: any
+
 if (typeof window !== 'undefined') {
   client = new ApolloClient({
     uri: '/api/graphql',
     connectToDevTools: true
   } as any)
+
+  // Crate
+  {
+    const script = document.createElement('script')
+    script.src = 'https://cdn.jsdelivr.net/npm/@widgetbot/crate@3'
+    document.body.appendChild(script)
+
+    script.onload = () => {
+      crate = new (window as any).Crate({
+        server: '299881420891881473',
+        channel: '355719584830980096'
+      })
+    }
+  }
 }
 
 class App extends React.Component<any> {

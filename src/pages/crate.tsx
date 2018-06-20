@@ -3,6 +3,7 @@ import * as React from 'react'
 import Crater from '../components/Crater'
 import { Content, Root, Title } from '../styles'
 import { Feature, Paragraph } from '../styles/crate'
+import { crate } from '../layouts'
 
 class Crate extends React.Component {
   render() {
@@ -35,38 +36,24 @@ class Crate extends React.Component {
     )
   }
 
-  /**
-   * Load the Crate library for demo
-   */
-  crate
-
   componentDidMount() {
-    if (this.crate) return this.mounted()
-
-    // From network
-    const script = document.createElement('script')
-    script.src = 'https://cdn.jsdelivr.net/npm/@widgetbot/crate@3'
-    document.body.appendChild(script)
-
-    script.onload = () => {
-      this.crate = new (window as any).Crate({
-        server: '299881420891881473',
-        channel: '355719584830980096'
-      })
-      this.mounted()
-    }
+    let timer = setInterval(() => {
+      if (crate) {
+        clearInterval(timer)
+        this.mounted()
+      }
+    }, 5)
   }
 
   componentWillUnmount() {
-    if (this.crate) this.crate.hide()
+    if (crate) crate.show()
   }
 
   mounted() {
-    const { crate } = this
     crate.hide()
 
-    setTimeout(() => crate.show(), 2000)
-    setTimeout(() => crate.notify(`Try it out!`, false), 4000)
+    setTimeout(() => crate.show(), 1000)
+    setTimeout(() => crate.notify(`Try it out!`, false), 3000)
   }
 }
 
