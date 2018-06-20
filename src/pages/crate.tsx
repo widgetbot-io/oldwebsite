@@ -41,35 +41,32 @@ class Crate extends React.Component {
   crate
 
   componentDidMount() {
-    if ((window as any).Crate) return this.mounted()
+    if (this.crate) return this.mounted()
 
     // From network
     const script = document.createElement('script')
     script.src = 'https://cdn.jsdelivr.net/npm/@widgetbot/crate@3'
     document.body.appendChild(script)
 
-    script.onload = () => this.mounted()
-  }
-
-  componentWillUnmount() {
-    if (this.crate) {
-      this.crate.remove()
+    script.onload = () => {
+      this.crate = new (window as any).Crate({
+        server: '299881420891881473',
+        channel: '355719584830980096'
+      })
+      this.mounted()
     }
   }
 
-  mounted() {
-    const { Crate } = window as any
+  componentWillUnmount() {
+    if (this.crate) this.crate.hide()
+  }
 
-    const crate = new Crate({
-      server: '299881420891881473',
-      channel: '355719584830980096'
-    })
+  mounted() {
+    const { crate } = this
     crate.hide()
 
-    setTimeout(() => crate.show(), 3000)
+    setTimeout(() => crate.show(), 2000)
     setTimeout(() => crate.notify(`Try it out!`, false), 4000)
-
-    this.crate = crate
   }
 }
 
