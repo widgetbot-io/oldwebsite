@@ -28,10 +28,11 @@ if (typeof window !== 'undefined') {
     document.body.appendChild(script)
 
     script.onload = () => {
-      crate = new (window as any).Crate({
-        server: '299881420891881473',
-        channel: '355719584830980096'
-      })
+      !crate &&
+        (crate = new (window as any).Crate({
+          server: '299881420891881473',
+          channel: '355719584830980096'
+        }))
     }
   }
 }
