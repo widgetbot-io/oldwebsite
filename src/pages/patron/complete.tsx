@@ -75,7 +75,7 @@ class Patron extends React.Component {
         <Root>
           <Seperator.Left>{product && <Product {...product} />}</Seperator.Left>
           <Seperator.Right>
-            <CardForm product={product} />
+            <CardForm />
           </Seperator.Right>
         </Root>
       </Elements>
