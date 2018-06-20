@@ -20,7 +20,7 @@ export const Title = styled($Title.Secondary)`
 `
 
 export const Paragraph = styled('p')`
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   opacity: 0.4;
 `
 

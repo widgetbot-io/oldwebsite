@@ -25,9 +25,7 @@ class _CardForm extends React.Component<any> {
     return (
       <Form onSubmit={this.handleSubmit}>
         <Title>Card details</Title>
-        <Paragraph>
-          Your payment will be securely processed with Stripe
-        </Paragraph>
+        <Paragraph>Your payment will be securely processed by Stripe</Paragraph>
         <Card>
           <CardElement
             style={{
