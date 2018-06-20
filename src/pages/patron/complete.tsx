@@ -1,3 +1,4 @@
+import * as URLSearchParams from 'url-search-params'
 import * as React from 'react'
 import { CardElement, Elements, injectStripe } from 'react-stripe-elements'
 
