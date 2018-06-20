@@ -31,6 +31,13 @@ class Crate extends React.Component {
               Intuitive API
             </Feature.Item>
           </Feature.List>
+
+          <Paragraph style={{ opacity: 0.3 }}>
+            Learn more over at{' '}
+            <a href="https://docs.widgetbot.io/embed/crate" target="_blank">
+              the documentation
+            </a>
+          </Paragraph>
         </Content.Right>
       </Root>
     )
