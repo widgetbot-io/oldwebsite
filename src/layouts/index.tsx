@@ -99,8 +99,9 @@ class App extends React.Component<any> {
   }
 
   registerStripe() {
+    console.log('Using production key')
     this.setState({
-      stripe: (window as any).Stripe('pk_test_Z6B3rO296TZmtf87UQFfiDiw')
+      stripe: (window as any).Stripe('pk_live_ktph9y9wUoV4Q4dgDxPc89Pv')
     })
   }
 
