@@ -1,31 +1,44 @@
+import { navigateTo } from 'gatsby-link'
 import * as React from 'react'
 import { CardElement, Elements, injectStripe } from 'react-stripe-elements'
 
-import { Root } from '../../styles'
-import {
-  Form,
-  Card,
-  Purchase,
-  Seperator,
-  Paragraph,
-  Title
-} from '../../styles/patron'
-import { navigateTo } from 'gatsby-link'
 import { products } from '.'
 import Product from '../../components/Product'
-import {} from '../../styles/crate'
+import { Root } from '../../styles'
+import {
+  Card,
+  Form,
+  Paragraph,
+  Purchase,
+  Seperator,
+  Title
+} from '../../styles/patron'
 
 class _CardForm extends React.Component<any> {
-  handleSubmit = ev => {
-    ev.preventDefault()
-    this.props.stripe.createToken().then(payload => console.log(payload))
+  state = {
+    token: false
+  }
+
+  async handleSubmit(event) {
+    const { stripe } = this.props
+    event.preventDefault()
+
+    const { token } = await stripe.createToken()
+
+    this.setState({
+      token: token.id
+    })
   }
 
   render() {
     return (
-      <Form onSubmit={this.handleSubmit}>
+      <Form onSubmit={this.handleSubmit.bind(this)}>
         <Title>Card details</Title>
-        <Paragraph>Your payment will be securely processed by Stripe</Paragraph>
+        <Paragraph>
+          {this.state.token
+            ? `Your token is "${this.state.token}"`
+            : `Your payment will be securely processed by Stripe`}
+        </Paragraph>
         <Card>
           <CardElement
             style={{
