@@ -19,14 +19,14 @@ class _CardForm extends React.Component<any> {
     token: false
   }
 
-  async handleSubmit(event) {
+  handleSubmit(event) {
     const { stripe } = this.props
     event.preventDefault()
 
-    const { token } = await stripe.createToken()
-
-    this.setState({
-      token: token.id
+    const { token } = stripe.createToken().then(({ token }) => {
+      this.setState({
+        token: token.id
+      })
     })
   }
 
