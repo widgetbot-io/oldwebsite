@@ -38,15 +38,11 @@ const Footer = () => (
     </Links>
     <Chin>
       <Copyright
-      >{`© ${new Date().getFullYear()} WidgetBot. Not affiliated with Discord`}</Copyright>
+      >{`© ${new Date().getFullYear()} Panether Studios. Not affiliated with Discord`}</Copyright>
       <Credits>
-        {`By `}
-        <a href="https://samdd.me" target="_blank">
-          Sam Denty
-        </a>
-        {` and `}
-        <a href="https://voakie.com" target="_blank">
-          Voakie
+        {`A project by `}
+        <a href="https://www.mythereum.io/" target="_blank">
+          Panether Studios
         </a>
       </Credits>
     </Chin>
