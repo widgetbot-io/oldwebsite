@@ -78,6 +78,9 @@ class App extends React.Component<any> {
                   'discord, widgets, widgetbot, titanembeds, titanembeds alternatives, samdd, voakie, embed discord on website'
               }
             ]}
+            link={[
+              { rel: 'shortcut icon', type: 'image/png', href: 'https://cdn.discordapp.com/icons/299881420891881473/943564416dd7d01f0bc8e02576a2af5f.png?size=128' }
+            ]}
           />
           <Header withText={location.pathname !== '/'} />
           <StripeProvider stripe={this.state.stripe}>
