@@ -14,18 +14,18 @@ const Footer = () => (
   <Root>
     <Links>
       <Section name="WidgetBot">
-        <Place.Href href="https://status.widgetbot.io" target="_blank">
+        <Place.Href href="https://status.widgetbot.io" target="_blank" rel="noopener">
           Server status
         </Place.Href>
       </Section>
       <Section name="About">
-        <Place.Href href="https://github.com/widgetbot-io" target="_blank">
+        <Place.Href href="https://github.com/widgetbot-io" target="_blank" rel="noopener">
           GitHub
         </Place.Href>
-        <Place.Href href="https://discord.gg/zyqZWr2" target="_blank">
+        <Place.Href href="https://discord.gg/zyqZWr2" target="_blank" rel="noopener">
           Discord server
         </Place.Href>
-        <Place.Href href="mailto:contact@widgetbot.io" target="_blank">
+        <Place.Href href="mailto:contact@widgetbot.io" target="_blank" rel="noopener">
           Contact us
         </Place.Href>
       </Section>
@@ -41,7 +41,7 @@ const Footer = () => (
       >{`© ${new Date().getFullYear()} Panether Studios. Not affiliated with Discord`}</Copyright>
       <Credits>
         {`A project by `}
-        <a href="https://www.mythereum.io/" target="_blank">
+        <a href="https://www.mythereum.io/" target="_blank" rel="noopener">
           Panether Studios
         </a>
       </Credits>

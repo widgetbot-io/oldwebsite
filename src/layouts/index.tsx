@@ -81,6 +81,7 @@ class App extends React.Component<any> {
             link={[
               { rel: 'shortcut icon', type: 'image/png', href: 'https://cdn.discordapp.com/icons/299881420891881473/943564416dd7d01f0bc8e02576a2af5f.png?size=128' }
             ]}
+            htmlAttributes={{ lang : "en-US" }}
           />
           <Header withText={location.pathname !== '/'} />
           <StripeProvider stripe={this.state.stripe}>

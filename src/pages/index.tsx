@@ -28,18 +28,13 @@ class Home extends React.Component {
     return (
       <Root>
         <Content.Left>
-          <div style={{ opacity: 0.3 }}>
-            This website is currently under construction!<br />
-            Once you've clicked "Invite", head to
-            https://widgetbot.io/channels/YOUR_SERVER_ID
-          </div>
           <Title.Primary>WidgetBot</Title.Primary>
           <Title.Secondary>Discord widgets for your website</Title.Secondary>
-          <Button.Primary href={this.state.invite} target="_blank">
-            Invite
+          <Button.Primary href="https://docs.widgetbot.io/tutorial" target="_blank" rel="noopener">
+            Tutorial
           </Button.Primary>
-          <Button.Secondary href="https://docs.widgetbot.io/embed/">
-            Documentation
+          <Button.Secondary href="https://discord.gg/8zYvp6W" target="_blank" rel="noopener">
+            Support
           </Button.Secondary>
         </Content.Left>
         <Content.Right>
