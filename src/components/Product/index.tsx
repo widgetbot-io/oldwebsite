@@ -42,7 +42,7 @@ class Product extends React.PureComponent<Props> {
       <Root position={zIndex} highlight={highlight}>
         <Title>{name}</Title>
         <Price>
-          {`€${price}`}
+          {`$${price}`}
           <Contract>{`/mo`}</Contract>
         </Price>
         <Details>

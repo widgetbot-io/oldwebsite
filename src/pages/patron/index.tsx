@@ -8,50 +8,52 @@ export const products = [
   {
     name: 'Free',
     id: 'free',
-    processor: false,
+    processor: 'tutorial',
     button: 'Get started',
     price: 0,
     zIndex: 1,
     tip: 'Fully usable, feature-rich',
     features: [
       'Guest chat',
-      'Channel switching',
-      '5,000 requests a day',
-      '100 concurrent connections, with realtime updates for all users'
+      'Channel switching'//,
+      //'5,000 requests a day',
+      //'100 concurrent connections, with realtime updates for all users'
     ]
   },
   {
-    name: 'Supporter',
+    name: 'Patron',
     id: 'supporter',
-    processor: 'patreon',
+    processor: 'patron',
     button: 'Subscribe',
-    price: 2,
+    price: 2.5,
     zIndex: 3,
     tip: 'All that plus',
     features: [
-      '15,000 requests a day',
-      '500 concurrent connections, with realtime updates for all users',
+      //'15,000 requests a day',
+      //'500 concurrent connections, with realtime updates for all users',
       'Custom embed colors',
-      'Embed analytics'
+      'Patron role in Discord'
+      //'Embed analytics'
     ]
   },
   {
-    name: 'Pro',
+    name: 'Ultimate Patron',
     id: 'pro',
-    processor: 'patreon',
+    processor: 'ultimate',
     button: 'Subscribe',
     highlight: true,
     price: 5,
     zIndex: 4,
     tip: 'All that plus',
     features: [
-      '45,000 requests a day',
-      '1000 concurrent connections, with realtime updates for all users',
+      //'45,000 requests a day',
+      //'1000 concurrent connections, with realtime updates for all users',
       'Custom embed CSS',
-      'Instantly display an alert to all of your visitors',
-      'Option to remove branding'
+      //'Instantly display an alert to all of your visitors',
+      'Option to remove branding',
+      'Ultimate Patron role in Discord'
     ]
-  },
+  }/*,
   {
     name: 'Self-hosted',
     id: 'self-hosted',
@@ -67,7 +69,7 @@ export const products = [
       'Weekly server updates',
       'Link to your site on our homepage'
     ]
-  }
+  }*/
 ]
 
 const Patron = () => (
@@ -82,11 +84,11 @@ const Patron = () => (
         {...product}
         key={product.id}
         onClick={() =>
-          product.processor === 'stripe'
-            ? navigateTo(`./complete/?product=${product.id}`)
-            : product.processor === 'patreon'
-              ? window.open('https://www.patreon.com/bePatron?u=5594164')
-              : navigateTo('/')
+          product.processor === 'patron'
+            ? window.open('https://www.patreon.com/join/widgetbot/checkout?rid=2875090')
+            : product.processor === 'ultimate'
+              ? window.open('https://www.patreon.com/join/widgetbot/checkout?rid=1826876')
+              : navigateTo('https://docs.widgetbot.io.tutorial')
         }
       />
     ))}
