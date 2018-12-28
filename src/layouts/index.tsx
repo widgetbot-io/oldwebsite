@@ -46,7 +46,7 @@ if (typeof window !== 'undefined') {
           content: 'Welcome! Click below to test out [Crate](/crate/)',
           timeout: 20 * 1000,
           avatar:
-            'https://cdn.discordapp.com/icons/299881420891881473/943564416dd7d01f0bc8e02576a2af5f.png?size=128'
+            'https://cdn.discordapp.com/avatars/510537630039932948/0e772cd25fc952ccb631caf1bee82864.png?size=256'
         })
       }
     }
@@ -80,7 +80,7 @@ class App extends React.Component<any> {
               }
             ]}
             link={[
-              { rel: 'shortcut icon', type: 'image/png', href: 'https://cdn.discordapp.com/icons/299881420891881473/943564416dd7d01f0bc8e02576a2af5f.png?size=128' }
+              { rel: 'shortcut icon', type: 'image/png', href: 'https://cdn.discordapp.com/avatars/510537630039932948/0e772cd25fc952ccb631caf1bee82864.png?size=256' }
             ]}
             htmlAttributes={{ lang : "en-US" }}
           />
