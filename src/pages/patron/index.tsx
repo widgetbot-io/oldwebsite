@@ -12,12 +12,14 @@ export const products = [
     button: 'Get started',
     price: 0,
     zIndex: 1,
-    tip: 'Fully usable, feature-rich',
+    tip: 'Use all of WidgetBot\'s core features for free!',
     features: [
-      'Guest chat',
-      'Channel switching'//,
-      //'5,000 requests a day',
-      //'100 concurrent connections, with realtime updates for all users'
+      'Read and send messages (optional)',
+      'Multiple channels (optional)',
+      'Unlimited widgets',
+      'Easy to set up',
+      'Fast support',
+      'You\'re awesome'
     ]
   },
   {
@@ -25,15 +27,14 @@ export const products = [
     id: 'supporter',
     processor: 'patron',
     button: 'Subscribe',
-    price: 2.5,
+    price: 2.50,
     zIndex: 3,
-    tip: 'All that plus',
+    tip: 'Set custom colors!',
     features: [
-      //'15,000 requests a day',
-      //'500 concurrent connections, with realtime updates for all users',
-      'Custom embed colors',
-      'Patron role in Discord'
-      //'Embed analytics'
+      'All Free features!',
+      'Set custom colors in your widget to make it match your site! (optional)',
+      'Patron role in Discord',
+      'You\'re more awesome'
     ]
   },
   {
@@ -44,14 +45,13 @@ export const products = [
     highlight: true,
     price: 5,
     zIndex: 4,
-    tip: 'All that plus',
+    tip: 'Complete customization',
     features: [
-      //'45,000 requests a day',
-      //'1000 concurrent connections, with realtime updates for all users',
-      'Custom embed CSS',
-      //'Instantly display an alert to all of your visitors',
-      'Option to remove branding',
-      'Ultimate Patron role in Discord'
+      'All Free and Patron features',
+      'Set custom CSS in your widget to customize it even more! (optional)',
+      'Remove WidgetBot Branding (optional)',
+      'Ultimate Patron role in Discord',
+      'You\'re even more awesome'
     ]
   }/*,
   {
@@ -88,7 +88,7 @@ const Patron = () => (
             ? window.open('https://www.patreon.com/join/widgetbot/checkout?rid=2875090')
             : product.processor === 'ultimate'
               ? window.open('https://www.patreon.com/join/widgetbot/checkout?rid=1826876')
-              : navigateTo('https://docs.widgetbot.io.tutorial')
+              : window.location.href = 'https://docs.widgetbot.io/tutorial'
         }
       />
     ))}
