@@ -30,7 +30,7 @@ class Home extends React.Component {
         <Content.Left>
           <Title.Primary>WidgetBot</Title.Primary>
           <Title.Secondary>Discord widgets for your website</Title.Secondary>
-          <Button.Primary href="https://docs.widgetbot.io/tutorial" target="_blank" rel="noopener">
+          <Button.Primary href="https://docs.widgetbot.io/tutorial" rel="noopener">
             Tutorial
           </Button.Primary>
           <Button.Secondary href="https://discord.gg/8zYvp6W" target="_blank" rel="noopener">
