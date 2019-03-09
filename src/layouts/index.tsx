@@ -46,7 +46,7 @@ if (typeof window !== 'undefined') {
           content: 'Welcome! Click below to test out [Crate](/crate/)',
           timeout: 20 * 1000,
           avatar:
-            'https://cdn.discordapp.com/avatars/510537630039932948/0e772cd25fc952ccb631caf1bee82864.png?size=256'
+            'https://i.imgur.com/EdYK2CV.png'
         })
       }
     }
