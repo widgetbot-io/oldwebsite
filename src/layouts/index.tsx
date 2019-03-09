@@ -80,7 +80,7 @@ class App extends React.Component<any> {
               }
             ]}
             link={[
-              { rel: 'shortcut icon', type: 'image/png', href: 'https://cdn.discordapp.com/avatars/510537630039932948/0e772cd25fc952ccb631caf1bee82864.png?size=256' }
+              { rel: 'shortcut icon', type: 'image/png', href: 'https://i.imgur.com/EdYK2CV.png' }
             ]}
             htmlAttributes={{ lang : "en-US" }}
           />
