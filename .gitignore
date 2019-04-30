@@ -5,6 +5,5 @@ yarn-error.log
 
 # Build directory
 /public
-!/public/_redirects
 .DS_Store
 .idea/workspace.xml
