@@ -1,3 +1,3 @@
 https://about.widgetbot.io/* https://widgetbot.io/:splat 301!
-/channels/*  https://disweb.deploys.io/channels/:splat 302!
-/api/*  https://disweb.deploys.io/api/:splat 302!
+/channels/*  https://disweb.dashflo.net/channels/:splat 302!
+/api/*  https://disweb.dashflo.net/api/:splat 302!
