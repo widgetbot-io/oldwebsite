@@ -33,7 +33,7 @@ if (typeof window !== 'undefined') {
         crate = new (window as any).Crate({
           server: '299881420891881473',
           channel: '355719584830980096',
-          shard: 'https://e.widgetbot.io',
+          shard: 'https://disweb.dashflo.net',
           css: css`
             * {
               font-family: Whitney, 'Helvetica Neue', Helvetica, Arial,

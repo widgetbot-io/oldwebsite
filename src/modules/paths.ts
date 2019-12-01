@@ -4,5 +4,5 @@ export const root =
 export const demo = {
   server: '299881420891881473',
   channel: '450428756855750666',
-  shard: 'https://e.widgetbot.io'
+  shard: 'https://disweb.dashflo.net'
 }
