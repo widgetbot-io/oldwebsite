@@ -14,9 +14,6 @@ const Footer = () => (
   <Root>
     <Links>
       <Section name="WidgetBot">
-        <Place.Href href="https://status.widgetbot.io">
-          Server Status
-        </Place.Href>
         <Place.Href href="https://up.widgetbot.io">
           Service Uptime
         </Place.Href>
