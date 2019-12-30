@@ -36,12 +36,9 @@ const Footer = () => (
     </Links>
     <Chin>
       <Copyright
-      >{`© ${new Date().getFullYear()} Panether Studios. Not affiliated with Discord`}</Copyright>
+      >{`© ${new Date().getFullYear()} Venix. Not affiliated with Discord.`}</Copyright>
       <Credits>
-        {`A project by `}
-        <a href="https://www.mythereum.io/" target="_blank" rel="noopener">
-          Panether Studios
-        </a>
+        {`A project by Venix`}
       </Credits>
     </Chin>
   </Root>
