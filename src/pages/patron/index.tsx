@@ -12,64 +12,68 @@ export const products = [
     button: 'Get started',
     price: 0,
     zIndex: 1,
-    tip: 'Use all of WidgetBot\'s core features for free!',
+    tip: "Use all of WidgetBot's core features for free!",
     features: [
       'Read and send messages (optional)',
       'Multiple channels (optional)',
       'Unlimited widgets',
       'Easy to set up',
       'Fast support',
-      'You\'re awesome'
+      "You're awesome"
     ]
   },
   {
-    name: 'Patron',
-    id: 'supporter',
-    processor: 'patron',
-    button: 'Subscribe',
-    price: 2.50,
+    name: 'WidgetBot Red',
+    id: 'red',
+    processor: 'red',
+    button: 'Coming Soon',
+    price: 2.5,
     zIndex: 3,
-    tip: 'Set custom colors!',
+    tip:
+      'For just $2.50 you can get the following snazzy additions to your widget!',
     features: [
       'All Free features!',
-      'Set custom colors in your widget to make it match your site! (optional)',
-      'Patron role in Discord',
-      'You\'re more awesome'
+      'Custom colors for your widget',
+      'The ability to remove the branding from the widget',
+      'Role in Discord',
+      "You're more awesome"
     ]
   },
   {
-    name: 'Ultimate Patron',
-    id: 'pro',
-    processor: 'ultimate',
-    button: 'Subscribe',
+    name: 'WidgetBot Gold',
+    id: 'gold',
+    processor: 'gold',
+    button: 'Coming Soon',
     highlight: true,
-    price: 5,
+    price: 7.5,
     zIndex: 4,
-    tip: 'Complete customization',
+    tip:
+      'If you want to support us even more and allow us to grow and get better we will bless you with the following perks, all for $7.50!',
     features: [
-      'All Free and Patron features',
-      'Set custom CSS in your widget to customize it even more! (optional)',
-      'Remove WidgetBot Branding (optional)',
-      'Ultimate Patron role in Discord',
-      'You\'re even more awesome'
+      'All the amazing features listed in the first tier!!',
+      'Read-only mode to restrict your channels from angry people.',
+      'Restrict your guild to your domain to stop those pesky impersonators.',
+      'A powerful CSS customization system with beautiful docs to guide you at every step',
+      'Role in Discord',
+      "You're even more awesome"
     ]
-  }/*,
+  },
   {
-    name: 'Self-hosted',
-    id: 'self-hosted',
-    processor: 'stripe',
-    button: 'Subscribe',
-    price: 40,
+    name: 'WidgetBot Emerald',
+    id: 'emerald',
+    processor: 'emerald',
+    button: 'Coming Soon',
+    price: 15,
     zIndex: 2,
-    tip: 'Fast, packaged Node server',
+    tip: 'Support us a bit more to unlock more cool features for your widget!',
     features: [
-      'Unlimited requests',
-      'Unlimited concurrent users',
-      'Priority support',
-      'Weekly server updates',
-      'Link to your site on our homepage'
+      'All Red and Gold perks!',
+      'Let users on your site directly upload files from the widget, Useful for screenshots! (Coming after release)',
+      'Set a default avatar for all guests!',
+      'Role in Discord',
+      "You're the best, thanks for supporting us!"
     ]
-  }*/
+  }
 ]
 
 const Patron = () => (
@@ -84,11 +88,13 @@ const Patron = () => (
         {...product}
         key={product.id}
         onClick={() =>
-          product.processor === 'patron'
-            ? window.open('https://www.patreon.com/join/widgetbot/checkout?rid=2875090')
-            : product.processor === 'ultimate'
-              ? window.open('https://www.patreon.com/join/widgetbot/checkout?rid=1826876')
-              : window.location.href = 'https://docs.widgetbot.io/tutorial'
+          product.processor === 'red'
+            ? null // window.open('https://www.patreon.com/join/widgetbot/checkout?rid=2875090')
+            : product.processor === 'gold'
+              ? null // window.open('https://www.patreon.com/join/widgetbot/checkout?rid=1826876')
+              : product.processor === 'emerald'
+                ? null // window.open('https://www.patreon.com/join/widgetbot/checkout?rid=1826876')
+                : (window.location.href = 'https://docs.widgetbot.io/tutorial')
         }
       />
     ))}
