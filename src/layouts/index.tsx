@@ -5,7 +5,7 @@ import ApolloClient from 'apollo-boost'
 import { ThemeProvider } from 'emotion-theming'
 import * as React from 'react'
 import Helmet from 'react-helmet'
-import { StripeProvider } from 'react-stripe-elements'
+//import { StripeProvider } from 'react-stripe-elements'
 
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -80,16 +80,21 @@ class App extends React.Component<any> {
               }
             ]}
             link={[
-              { rel: 'shortcut icon', type: 'image/png', href: 'https://cdn.discordapp.com/avatars/510537630039932948/0e772cd25fc952ccb631caf1bee82864.png?size=256' }
+              {
+                rel: 'shortcut icon',
+                type: 'image/png',
+                href:
+                  'https://cdn.discordapp.com/avatars/510537630039932948/0e772cd25fc952ccb631caf1bee82864.png?size=256'
+              }
             ]}
-            htmlAttributes={{ lang : "en-US" }}
+            htmlAttributes={{ lang: 'en-US' }}
           />
           <Header withText={location.pathname !== '/'} />
-          <StripeProvider stripe={this.state.stripe}>
+          {/*<StripeProvider stripe={this.state.stripe}>
             <Content onClick={() => this.footer(false)}>
               {(children as any)()}
             </Content>
-          </StripeProvider>
+          </StripeProvider>*/}
           <Footer />
         </Root>
       </ThemeProvider>
@@ -100,15 +105,15 @@ class App extends React.Component<any> {
     this.scrollListener = this.onScroll.bind(this)
     window.addEventListener('scroll', this.scrollListener)
 
-    this.registerStripe()
+    //this.registerStripe()
   }
 
-  registerStripe() {
+  /*registerStripe() {
     console.log('Using production key')
     this.setState({
       stripe: (window as any).Stripe('pk_live_ktph9y9wUoV4Q4dgDxPc89Pv')
     })
-  }
+  }*/
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.scrollListener)
