@@ -17,7 +17,7 @@ export let crate: any
 
 if (typeof window !== 'undefined') {
   client = new ApolloClient({
-    uri: '/api/graphql',
+    uri: 'https://e.widgetbot.io/api/graphql',
     connectToDevTools: true
   } as any)
 
@@ -80,9 +80,14 @@ class App extends React.Component<any> {
               }
             ]}
             link={[
-              { rel: 'shortcut icon', type: 'image/png', href: 'https://cdn.discordapp.com/avatars/510537630039932948/0e772cd25fc952ccb631caf1bee82864.png?size=256' }
+              {
+                rel: 'shortcut icon',
+                type: 'image/png',
+                href:
+                  'https://cdn.discordapp.com/avatars/510537630039932948/0e772cd25fc952ccb631caf1bee82864.png?size=256'
+              }
             ]}
-            htmlAttributes={{ lang : "en-US" }}
+            htmlAttributes={{ lang: 'en-US' }}
           />
           <Header withText={location.pathname !== '/'} />
           <StripeProvider stripe={this.state.stripe}>
