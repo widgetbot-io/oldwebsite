@@ -5,7 +5,7 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-typescript',
-    'gatsby-plugin-stripe-elements',
+    //'gatsby-plugin-stripe-elements',
     'gatsby-plugin-emotion'
   ],
   proxy: {

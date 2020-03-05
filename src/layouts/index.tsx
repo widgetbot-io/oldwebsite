@@ -5,7 +5,7 @@ import ApolloClient from 'apollo-boost'
 import { ThemeProvider } from 'emotion-theming'
 import * as React from 'react'
 import Helmet from 'react-helmet'
-import { StripeProvider } from 'react-stripe-elements'
+//import { StripeProvider } from 'react-stripe-elements'
 
 import Footer from '../components/Footer'
 import Header from '../components/Header'
@@ -90,11 +90,11 @@ class App extends React.Component<any> {
             htmlAttributes={{ lang: 'en-US' }}
           />
           <Header withText={location.pathname !== '/'} />
-          <StripeProvider stripe={this.state.stripe}>
-            <Content onClick={() => this.footer(false)}>
-              {(children as any)()}
-            </Content>
-          </StripeProvider>
+          {/*<StripeProvider stripe={this.state.stripe}>*/}
+          <Content onClick={() => this.footer(false)}>
+            {(children as any)()}
+          </Content>
+          {/*</StripeProvider>*/}
           <Footer />
         </Root>
       </ThemeProvider>
@@ -105,15 +105,15 @@ class App extends React.Component<any> {
     this.scrollListener = this.onScroll.bind(this)
     window.addEventListener('scroll', this.scrollListener)
 
-    this.registerStripe()
+    //this.registerStripe()
   }
 
-  registerStripe() {
+  /*registerStripe() {
     console.log('Using production key')
     this.setState({
       stripe: (window as any).Stripe('pk_live_ktph9y9wUoV4Q4dgDxPc89Pv')
     })
-  }
+  }*/
 
   componentWillUnmount() {
     window.removeEventListener('scroll', this.scrollListener)
