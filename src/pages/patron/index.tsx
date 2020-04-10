@@ -26,7 +26,7 @@ export const products = [
     name: 'WidgetBot Red',
     id: 'red',
     processor: 'red',
-    button: 'Coming Soon',
+    button: 'Click Me!',
     price: 2.5,
     zIndex: 3,
     tip:
@@ -43,7 +43,7 @@ export const products = [
     name: 'WidgetBot Gold',
     id: 'gold',
     processor: 'gold',
-    button: 'Coming Soon',
+    button: 'Click Me!',
     highlight: true,
     price: 7.5,
     zIndex: 4,
@@ -62,7 +62,7 @@ export const products = [
     name: 'WidgetBot Emerald',
     id: 'emerald',
     processor: 'emerald',
-    button: 'Coming Soon',
+    button: 'Click Me!',
     price: 15,
     zIndex: 2,
     tip: 'Support us a bit more to unlock more cool features for your widget!',
@@ -89,11 +89,11 @@ const Patron = () => (
         key={product.id}
         onClick={() =>
           product.processor === 'red'
-            ? null // window.open('https://www.patreon.com/join/widgetbot/checkout?rid=2875090')
+            ? window.open('https://www.patreon.com/join/widgetbot/checkout?rid=4124117')
             : product.processor === 'gold'
-              ? null // window.open('https://www.patreon.com/join/widgetbot/checkout?rid=1826876')
+              ? window.open('https://www.patreon.com/join/widgetbot/checkout?rid=4124125')
               : product.processor === 'emerald'
-                ? null // window.open('https://www.patreon.com/join/widgetbot/checkout?rid=1826876')
+                ? window.open('https://www.patreon.com/join/widgetbot/checkout?rid=4124130')
                 : (window.location.href = 'https://docs.widgetbot.io/tutorial')
         }
       />
