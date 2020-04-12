@@ -14,15 +14,16 @@ import {
 export { Item, Tip } from './elements'
 
 interface Props {
-  name: string
-  price: number
-  zIndex: number
-  button: string
-  tip: string
-  features: string[]
-
-  onClick?: Function
-  highlight?: boolean
+  name: string;
+  id: string;
+  processor: string;
+  button: string;
+  price: number;
+  zIndex: number;
+  tip: string;
+  features: string[];
+  highlight: boolean;
+  onClick?: () => any;
 }
 
 class Product extends React.PureComponent<Props> {
@@ -36,7 +37,7 @@ class Product extends React.PureComponent<Props> {
       button,
       onClick,
       highlight
-    } = this.props
+    } = this.props;
 
     return (
       <Root position={zIndex} highlight={highlight}>

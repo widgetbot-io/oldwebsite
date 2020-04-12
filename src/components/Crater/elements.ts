@@ -1,15 +1,16 @@
-import styled, { css } from 'react-emotion'
+import {css} from "emotion";
+import styled from "@emotion/styled";
 
 interface Props {
   proportions: number[]
   fadeIn: boolean
 }
 
-export const Root = styled<Props, 'svg'>('svg')`
+export const Root = styled.svg<Props>`
   height: 434px;
   width: 434px;
   overflow: visible;
-  opacity: ${({ proportions }) => (proportions ? 1 : 0)};
+  opacity: ${({ proportions }: Props) => (proportions ? 1 : 0)};
   transition: opacity 0.3s ease;
 
   .crater > path:not(.background) {
@@ -42,8 +43,8 @@ export const Root = styled<Props, 'svg'>('svg')`
       return null
     }};
   }
-`
+`;
 
-export const Crater = styled('g')``
+export const Crater = styled('g')``;
 
-export const Button = styled('g')``
+export const Button = styled('g')``;

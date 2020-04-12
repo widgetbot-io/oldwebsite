@@ -1,8 +1,6 @@
 import * as React from 'react'
-
-import Product, { Item, Tip } from '../../components/Product'
+import Product from '../../components/Product'
 import { Root } from '../../styles'
-import { navigateTo } from 'gatsby-link'
 
 export const products = [
   {
@@ -74,7 +72,7 @@ export const products = [
       "You're the best, thanks for supporting us!"
     ]
   }
-]
+];
 
 const Patron = () => (
   <Root
@@ -87,18 +85,19 @@ const Patron = () => (
       <Product
         {...product}
         key={product.id}
+        highlight={false}
         onClick={() =>
           product.processor === 'red'
-            ? window.open('https://www.patreon.com/join/widgetbot/checkout?rid=4124117')
-            : product.processor === 'gold'
+              ? window.open('https://www.patreon.com/join/widgetbot/checkout?rid=4124117')
+              : product.processor === 'gold'
               ? window.open('https://www.patreon.com/join/widgetbot/checkout?rid=4124125')
               : product.processor === 'emerald'
-                ? window.open('https://www.patreon.com/join/widgetbot/checkout?rid=4124130')
-                : (window.location.href = 'https://docs.widgetbot.io/tutorial')
+                  ? window.open('https://www.patreon.com/join/widgetbot/checkout?rid=4124130')
+                  : (window.location.href = 'https://docs.widgetbot.io/tutorial')
         }
       />
     ))}
   </Root>
-)
+);
 
 export default Patron

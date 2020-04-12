@@ -34,7 +34,7 @@ class Crate extends React.Component {
 
           <Paragraph style={{ opacity: 0.3 }}>
             Learn more over at{' '}
-            <a href="https://docs.widgetbot.io/embed/crate" target="_blank">
+            <a href="https://docs.widgetbot.io/embed/crate" target="_blank" rel="noopener noreferrer">
               the documentation
             </a>
           </Paragraph>

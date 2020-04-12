@@ -1,18 +1,25 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "sourceMap": true,
-    "module": "es2015",
-    "target": "esnext",
-    "jsx": "react",
-    "lib": ["dom", "es2015", "es2017"],
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
-    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "baseUrl": ".",
-    "paths": {
-      "typed-emotion": ["src/modules/emotion.ts"]
-    }
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react"
   },
-  "include": ["./src/**/*"]
+  "include": [
+    "src"
+  ]
 }

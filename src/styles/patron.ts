@@ -1,30 +1,30 @@
-import styled, { css } from 'react-emotion'
+import styled from '@emotion/styled';
 import { Button, Content, Title as $Title } from '.'
 
-export namespace Seperator {
-  export const Left = styled(Content.Left)`
+export class Separator {
+  static Left = styled(Content.Left)`
     width: 30%;
-  `
+  `;
 
-  export const Right = styled(Content.Right)`
+  static Right = styled(Content.Right)`
     padding: 0 50px;
-  `
+  `;
 }
 
-export const Form = styled('form')`
+export const Form = styled.form`
   width: 100%;
-`
+`;
 
 export const Title = styled($Title.Secondary)`
   padding-bottom: 1rem;
-`
+`;
 
-export const Paragraph = styled('p')`
+export const Paragraph = styled.p`
   margin-bottom: 3rem;
   opacity: 0.4;
-`
+`;
 
-export const Card = styled('div')`
+export const Card = styled.div`
   height: 40px;
   display: flex;
 
@@ -38,9 +38,9 @@ export const Card = styled('div')`
     box-shadow: rgba(114, 137, 218, 0.7) 0px 0px 70px;
     transition: box-shadow 150ms ease;
   }
-`
+`;
 
-const button = Button.Primary.withComponent('button')
+const button = Button.Primary.withComponent('button');
 export const Purchase = styled(button)`
   transition: all 150ms ease;
   background: none;
@@ -53,4 +53,4 @@ export const Purchase = styled(button)`
     transform: translateY(-1px);
     background-color: rgb(84, 101, 156);
   }
-`
+`;

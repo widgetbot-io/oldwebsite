@@ -1,13 +1,19 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled';
 
 export const Paragraph = styled('p')`
   font-weight: 200;
   font-size: 1.2rem;
   margin-bottom: 25px;
-`
+`;
 
-export namespace Feature {
-  export const List = styled('ul')`
+
+
+interface FeatureProps {
+  description: string
+}
+
+export class Feature {
+  static List = styled('ul')`
     list-style: none;
     padding: 0 10px;
 
@@ -16,13 +22,9 @@ export namespace Feature {
       padding-bottom: 0;
       margin-bottom: 0;
     }
-  `
+  `;
 
-  interface Props {
-    description: string
-  }
-
-  export const Item = styled<Props, 'li'>('li')`
+  static Item = styled.li<FeatureProps>`
     font-size: 1rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 10px;
@@ -36,5 +38,5 @@ export namespace Feature {
       color: rgba(255, 255, 255, 0.8);
       content: " - ${({ description }) => description}";
     }
-  `
+  `;
 }

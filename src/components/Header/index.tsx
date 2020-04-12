@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { Logo, Nav, Root } from './elements'
 
-const Header = ({ withText }) => (
+const Header = ({ withText }: { withText: boolean }) => (
   <Root>
     <Nav.Left>
       <Logo.Root to="/">

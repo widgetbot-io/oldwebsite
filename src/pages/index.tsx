@@ -15,8 +15,8 @@ interface Stats {
 class Home extends React.Component {
   state = {
     invite: `https://discordapp.com/oauth2/authorize?client_id=293731150239891456&scope=bot&permissions=537218112`,
-    stats: null as Stats
-  }
+    stats: null as unknown as Stats
+  };
 
   onAPI(api: API) {
     api.on('signIn', user => {
@@ -50,7 +50,6 @@ class Home extends React.Component {
         invite: string
         stats: Stats
       }
-
       const { data } = await client.query<Request>({
         query: gql`
           {
@@ -62,12 +61,11 @@ class Home extends React.Component {
             }
           }
         `
-      })
-
-      this.setState(data)
+      });
+      this.setState(data);
     } catch (e) {
-      console.error(e)
+      console.error(e);
     }
   }
 }
-export default Home
+export default Home;

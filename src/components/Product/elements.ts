@@ -1,11 +1,11 @@
-import styled from 'react-emotion'
+import styled from '@emotion/styled';
 
 interface Props {
   position: number
   highlight: boolean
 }
 
-export const Root = styled<Props, 'div'>('div')`
+export const Root = styled.div<Props>`
   display: flex;
   flex-direction: column;
   height: 500px;
@@ -25,7 +25,7 @@ export const Root = styled<Props, 'div'>('div')`
   box-shadow: rgba(114, 137, 218, ${({ position }) => 0.2 + position * 0.1}) 0px
     0px 70px
     ${({ highlight }) => (highlight ? ', #687DC5 0px 0px 0px 4px' : '')};
-`
+`;
 
 export const Title = styled('h1')`
   font-weight: 400;
@@ -37,7 +37,7 @@ export const Title = styled('h1')`
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.1);
   text-shadow: rgba(255, 255, 255, 0.7) 0px 0px 50px;
-`
+`;
 
 export const Price = styled('h2')`
   font-weight: 400;
@@ -45,12 +45,12 @@ export const Price = styled('h2')`
   text-align: center;
   padding: 10px 0;
   margin: 0;
-`
+`;
 
 export const Contract = styled('span')`
   font-size: 1.2rem;
   opacity: 0.3;
-`
+`;
 
 export const Details = styled('ul')`
   margin: 0;
@@ -67,7 +67,7 @@ export const Details = styled('ul')`
     background-color: rgba(255, 255, 255, 0.3);
     border: 4px solid #8793bf;
   }
-`
+`;
 
 export const Item = styled('li')`
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -79,7 +79,7 @@ export const Item = styled('li')`
   background-position: right;
   background-size: 17px;
   padding-right: 20px;
-`
+`;
 
 export const Tip = styled('span')`
   opacity: 0.5;
@@ -88,7 +88,7 @@ export const Tip = styled('span')`
   text-transform: uppercase;
   margin-bottom: 7px;
   display: inline-block;
-`
+`;
 
 export const Button = styled('button')`
   cursor: pointer;
@@ -101,4 +101,4 @@ export const Button = styled('button')`
   flex-shrink: 0;
   font-size: 1.07rem;
   outline: none;
-`
+`;

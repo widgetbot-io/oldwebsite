@@ -1,8 +1,14 @@
-import Link from 'gatsby-link'
+import { Link } from "react-router-dom";
+import { css } from "emotion";
+import styled from '@emotion/styled';
 
-import styled, { css } from '../../modules/emotion'
+interface Props {
+  theme: {
+    footer: string;
+  }
+}
 
-export const Root = styled('footer')`
+export const Root = styled.footer<Props>`
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -14,13 +20,8 @@ export const Root = styled('footer')`
   box-shadow: 0px -1px 54px rgba(0, 0, 0, 0.3);
   transform: translateY(150px);
   transition: opacity 0.2s ease;
-
-  ${({ theme }) =>
-    !theme.footer &&
-    css`
-      opacity: 0;
-    `};
-`
+  ${({ theme }: Props) => !theme.footer && css`opacity: 0;`};
+`;
 
 export const Links = styled('ul')`
   flex-grow: 1;
@@ -29,13 +30,13 @@ export const Links = styled('ul')`
   margin: 0;
   padding: 0;
   padding: 20px 70px;
-`
+`;
 
 interface ISection {
   name: string
 }
 
-export const Section = styled<ISection, 'li'>('li')`
+export const Section = styled.li<ISection>`
   flex-grow: 1;
 
   &::before {
@@ -47,10 +48,10 @@ export const Section = styled<ISection, 'li'>('li')`
     color: #90a3e6;
     text-shadow: rgba(144, 163, 230, 0.12) 0px 0px 3px;
   }
-`
+`;
 
-export namespace Place {
-  const Base = css`
+export class Place {
+  static Base = css`
     display: block;
     text-decoration: none;
     opacity: 0.6;
@@ -60,15 +61,15 @@ export namespace Place {
     &:hover {
       opacity: 0.9;
     }
-  `
+  `;
 
-  export const Route = styled(Link)`
-    ${Base};
-  `
+  static Route = styled(Link)`
+    ${Place.Base};
+  `;
 
-  export const Href = styled('a')`
-    ${Base};
-  `
+  static Href = styled('a')`
+    ${Place.Base};
+  `;
 }
 
 export const Chin = styled('div')`
@@ -78,11 +79,11 @@ export const Chin = styled('div')`
   line-height: 30px;
   font-size: 0.8rem;
   background-color: rgba(0, 0, 0, 0.1);
-`
+`;
 
 export const Copyright = styled('span')`
   opacity: 0.3;
-`
+`;
 
 export const Credits = styled('span')`
   flex-grow: 1;
@@ -91,4 +92,4 @@ export const Credits = styled('span')`
   a {
     color: #a8bdff;
   }
-`
+`;

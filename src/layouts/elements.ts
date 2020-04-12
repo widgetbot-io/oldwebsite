@@ -1,37 +1,37 @@
-import Particles from 'react-particles-js'
+import { css } from "emotion";
+import styled from '@emotion/styled';
 
-import styled, { css } from '../modules/emotion'
+interface Props {
+    theme: {
+        footer: string;
+    }
+}
 
-export const Root = styled('div')`
+export const Root = styled.div<Props>`
   display: flex;
   flex-direction: column;
   padding: 0px 1.0875rem 1.45rem;
   transition: background-color 0.2s ease;
+  ${({ theme }: Props) => theme.footer && css`background-color: rgba(0, 0, 0, 0.4);`};
+`;
 
-  ${({ theme }) =>
-    theme.footer &&
-    css`
-      background-color: rgba(0, 0, 0, 0.4);
-    `};
-`
+// export const Stars = styled(Particles)`
+//   width: 100%;
+//   height: 99%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: -1;
+// `;
 
-export const Stars = styled(Particles)`
-  width: 100%;
-  height: 99%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-`
-
-export const Content = styled('main')`
+export const Content = styled.main<Props>`
   display: flex;
   height: 100%;
   width: 100%;
   transition: box-shadow 0.1s linear, transform 0.5s ease,
     background-color 0.2s ease;
 
-  ${({ theme }) =>
+  ${({ theme }: Props) =>
     theme.footer &&
     css`
       cursor: pointer;
@@ -44,4 +44,4 @@ export const Content = styled('main')`
         pointer-events: none !important;
       }
     `};
-`
+`;

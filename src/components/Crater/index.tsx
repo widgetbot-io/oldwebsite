@@ -4,20 +4,20 @@ import { Button, Crater, Root } from './elements'
 
 class Crate extends React.PureComponent {
   state = {
-    proportions: null as number[],
+    proportions: null as unknown as number[],
     in: false
-  }
-  button: Element
+  };
+  button?: SVGPathElement;
 
   componentDidMount() {
-    const { bottom, right } = this.button.getBoundingClientRect()
-    const proportions = [window.innerWidth - right, window.innerHeight - bottom]
+    const { bottom, right } = this.button!.getBoundingClientRect();
+    const proportions = [window.innerWidth - right, window.innerHeight - bottom];
 
-    this.setState({ proportions })
+    this.setState({ proportions });
 
     setTimeout(() => {
-      this.setState({ in: true })
-    }, 100)
+      this.setState({ in: true });
+    }, 100);
   }
 
   render() {
@@ -35,7 +35,7 @@ class Crate extends React.PureComponent {
           <path
             d="M262.709 339.474c0 29.13 17.747 54.118 43.018 64.733 8.356 3.515 17.539 5.457 27.172 5.457 10.453 0 20.37-2.286 29.285-6.383a70.4 70.4 0 0 0 25.162-19.508c9.845-12.082 15.744-27.501 15.744-44.3 0-20.475-8.764-38.902-22.751-51.732-12.49-11.462-29.149-18.457-47.44-18.457-.317 0-.631.004-.945.004-9.119.125-17.819 1.984-25.781 5.268-25.509 10.51-43.464 35.615-43.464 64.918z"
             fill="#a1b0e2"
-            ref={ref => (this.button = ref)}
+            ref={ref => this.button = (ref as SVGPathElement)}
             className="background"
           />
           <path
