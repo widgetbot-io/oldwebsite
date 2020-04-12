@@ -1,0 +1,20 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support Discord server
+    url: https://discord.gg/NYBEhN7
+    about: If you need help, have a question, or something isn't working, please ask in our Discord server!
+  - name: Report WidgetBot Embed Bug
+    url: https://github.com/widgetbot-io/embed/issues/new?assignees=&labels=bug&template=bug_report.md&title=
+    about: The widgetbot-io/website repo is only for issues with the widgetbot.io website! If you need to report a bug with the embed itself, go to the embed repo.
+  - name: Submit a WidgetBot Embed Feature Request
+    url: https://github.com/widgetbot-io/embed/issues/new?assignees=&labels=bug&template=bug_report.md&title=
+    about: The widgetbot-io/website repo is only for issues with the widgetbot.io website! If you need to submit a feature request for the embed itself, go to the embed repo.
+  - name: Submit a WidgetBot Crate Issue
+    url: https://github.com/widgetbot-io/crate/issues/new
+    about: If you want to report a bug with or submit a feature request for the crate button specifically, create an issue in the crate repo! For issues in the embed itself, use an option above.
+  - name: Submit a WidgetBot.io Website Issue
+    url: https://github.com/widgetbot-io/website/issues/new
+    about: If you want to report a bug with or submit a feature request for the widgetbot.io website (not the chat embed), then create an issue here.
+  - name: See existing WidgetBot.io website issues
+    url: https://github.com/widgetbot-io/website/issues
+    about: Please look through the current issues before creating a new one, to make sure it hasn't been reported/suggested before!
