@@ -7,7 +7,7 @@ contact_links:
     url: https://github.com/widgetbot-io/embed/issues/new?assignees=&labels=bug&template=bug_report.md&title=
     about: The widgetbot-io/website repo is only for issues with the widgetbot.io website! If you need to report a bug with the embed itself, go to the embed repo.
   - name: Submit a WidgetBot Embed Feature Request
-    url: https://github.com/widgetbot-io/embed/issues/new?assignees=&labels=bug&template=bug_report.md&title=
+    url: https://github.com/widgetbot-io/embed/issues/new?assignees=&labels=suggestion&template=feature_request.md&title=
     about: The widgetbot-io/website repo is only for issues with the widgetbot.io website! If you need to submit a feature request for the embed itself, go to the embed repo.
   - name: Submit a WidgetBot Crate Issue
     url: https://github.com/widgetbot-io/crate/issues/new
