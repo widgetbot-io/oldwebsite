@@ -23,7 +23,7 @@ export const Root = styled.footer<Props>`
   ${({ theme }: Props) => !theme.footer && css`opacity: 0;`};
 `;
 
-export const Links = styled('ul')`
+export const Links = styled.ul`
   flex-grow: 1;
   display: flex;
   list-style: none;
@@ -51,8 +51,8 @@ export const Section = styled.li<ISection>`
 `;
 
 export class Place {
-  static Base = css`
-    display: block;
+  static Route = styled(Link)`
+   display: block;
     text-decoration: none;
     opacity: 0.6;
     transition: opacity 0.2s ease;
@@ -63,16 +63,20 @@ export class Place {
     }
   `;
 
-  static Route = styled(Link)`
-    ${Place.Base};
-  `;
+  static Href = styled.a`
+   display: block;
+    text-decoration: none;
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+    margin-bottom: 0.4rem;
 
-  static Href = styled('a')`
-    ${Place.Base};
+    &:hover {
+      opacity: 0.9;
+    }
   `;
 }
 
-export const Chin = styled('div')`
+export const Chin = styled.div`
   display: flex;
   height: 30px;
   padding: 0 70px;
@@ -81,11 +85,11 @@ export const Chin = styled('div')`
   background-color: rgba(0, 0, 0, 0.1);
 `;
 
-export const Copyright = styled('span')`
+export const Copyright = styled.span`
   opacity: 0.3;
 `;
 
-export const Credits = styled('span')`
+export const Credits = styled.span`
   flex-grow: 1;
   text-align: right;
 

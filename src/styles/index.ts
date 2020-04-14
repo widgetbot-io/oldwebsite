@@ -50,7 +50,7 @@ export class Title {
 }
 
 export class Button {
-  static Base = css`
+  static Base = styled.a`
     display: inline-block;
     position: relative;
     font-weight: 400;
@@ -69,16 +69,12 @@ export class Button {
     cursor: pointer;
   `;
 
-  static Primary = styled.a`
-    ${Button.Base};
-
+  static Primary = styled(Button.Base)`
     background: linear-gradient(45deg, rgb(114, 137, 218), rgb(102, 123, 193));
     box-shadow: rgba(114, 137, 218, 0.7) 0px 0px 100px;
   `;
 
-  static Secondary = styled.a`
-    ${Button.Base};
-
+  static Secondary = styled(Button.Base)`
     color: rgb(114, 137, 218);
     text-shadow: rgba(114, 137, 218, 0.7) 0px 0px 50px;
   `

@@ -37,13 +37,7 @@ if (typeof window !== 'undefined') {
         crate = new (window as any).Crate({
           server: '299881420891881473',
           channel: '355719584830980096',
-          shard: 'https://e.widgetbot.io',
-          css: css`
-            * {
-              font-family: Whitney, 'Helvetica Neue', Helvetica, Arial,
-                'Lucida Grande', sans-serif;
-            }
-          `
+          shard: 'https://e.widgetbot.io'
         });
 
         crate.notify({
@@ -94,7 +88,6 @@ class App extends React.Component<any> {
               htmlAttributes={{ lang: 'en-US' }}
             />
             <Header withText={window.location.pathname !== '/'} />
-            {/*<StripeProvider stripe={this.state.stripe}>*/}
             <Content onClick={() => this.footer(false)}>
               <Switch>
                 <Route exact path="/"><Home/></Route>
@@ -102,7 +95,6 @@ class App extends React.Component<any> {
                 <Route exact path="/crate"><Crate/></Route>
               </Switch>
             </Content>
-            {/*</StripeProvider>*/}
             <Footer />
           </Root>
         </ThemeProvider>

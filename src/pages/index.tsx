@@ -13,9 +13,11 @@ interface Stats {
 }
 
 class Home extends React.Component {
-  state = {
+  state: {
+    invite: string,
+    stats?: Stats
+  } = {
     invite: `https://discordapp.com/oauth2/authorize?client_id=293731150239891456&scope=bot&permissions=537218112`,
-    stats: null as unknown as Stats
   };
 
   onAPI(api: API) {
