@@ -56,9 +56,6 @@ class App extends React.Component<any> {
     footer: false,
     stripe: null
   };
-  scrollListener: any;
-  scrolling = false;
-
   render() {
     return (
       <BrowserRouter>
@@ -120,14 +117,16 @@ class App extends React.Component<any> {
     window.removeEventListener('scroll', this.scrollListener)
   }
 
-  onScroll() {
-    const threshold = 80
-    const element = document.documentElement // event.target
+  scrollListener: any;
+  scrolling = false;
 
+  // @ts-ignore
+  onScroll(event) {
+    const threshold = 80;
+    const element = document.documentElement;
     const atBottom =
       element.scrollHeight - element.scrollTop <=
       element.clientHeight + threshold;
-
     this.footer(atBottom && !this.scrolling)
   }
 

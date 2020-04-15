@@ -13,10 +13,10 @@ const Header = ({ withText }: { withText: boolean }) => (
     <Nav.Right>
       <Nav.Action to="/patron/">Patron</Nav.Action>
       <Nav.Action to="/crate/">Crate</Nav.Action>
-      <Nav.Href href="https://docs.widgetbot.io" target="_blank" rel="noopener">
+      <Nav.Href to="" href="https://docs.widgetbot.io" target="_blank" rel="noopener">
         Docs
       </Nav.Href>
-      <Nav.Href href="https://discord.gg/zyqZWr2" target="_blank" rel="noopener">
+      <Nav.Href to="" href="https://discord.gg/zyqZWr2" target="_blank" rel="noopener">
         Discord
       </Nav.Href>
       {/* <Nav.Href href="https://github.com/widgetbot-io/" target="_blank">

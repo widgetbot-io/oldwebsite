@@ -63,5 +63,5 @@ export class Nav {
     }
   `;
 
-  static Href = styled.a(Nav.Action.withComponent("a"));
+  static Href = Nav.Action.withComponent("a");
 }
